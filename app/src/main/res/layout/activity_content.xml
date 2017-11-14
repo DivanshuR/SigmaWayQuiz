@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:background="#fcadad"
+    tools:context="com.example.divan.sigmawayquiz.ContentActivity">
+
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pick Any Category"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:layout_marginTop="10dp"
+    android:textColor="#fbe41564"
+    android:textStyle="bold"
+    android:id="@+id/textView"
+    android:layout_centerHorizontal="true"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iot_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:onClick="iotclick"
+            android:src="@drawable/iot"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iot_image"
+            android:layout_marginEnd="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_toStartOf="@+id/sixsigma"
+            android:text="IOT Quiz"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/analytics"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/iot_image"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:clickable="true"
+            android:onClick="analyticsclick"
+            android:src="@drawable/analytics"
+            app:civ_border_color="#2525df"
+            app:civ_border_width="2dp" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/analytics"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/textView5"
+            android:text="Analytics Quiz"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sixsigma"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignTop="@+id/iot_image"
+            android:layout_toEndOf="@+id/textView4"
+            android:clickable="true"
+            android:onClick="mlclick"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ml"
+            app:civ_border_color="#e4d01a"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignEnd="@+id/sixsigma"
+            android:layout_marginEnd="38dp"
+            android:text="ML Quiz"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignTop="@+id/analytics"
+            android:layout_marginLeft="12dp"
+            android:layout_toEndOf="@+id/textView4"
+            android:clickable="true"
+            android:onClick="leansix"
+            android:src="@drawable/six"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/analytics"
+            android:layout_marginRight="2dp"
+            android:layout_toEndOf="@+id/analytics"
+            android:gravity="center"
+            android:text="LeanSixSigma Quiz"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:onClick="loginscreen"
+            android:text="Logout"
+            android:textColor="#000"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
